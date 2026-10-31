@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Tasks | Project Monitor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dashboard-body">
+
+    <aside class="sidebar">
+        <h2 class="sidebar-logo">🎓 Project Monitor</h2>
+
+        <nav class="side-nav">
+            <a href="dashboard.html">⌂ &nbsp; Dashboard</a>
+            <a href="projects.html">▣ &nbsp; My Projects</a>
+            <a class="active" href="tasks.html">✓ &nbsp; Tasks</a>
+            <a href="calendar.html">▦ &nbsp; Calendar</a>
+            <a href="messages.html">✉ &nbsp; Messages</a>
+            <a href="feedback.html">☆ &nbsp; Feedback</a>
+        </nav>
+
+        <a href="login.html" class="logout">⇥ &nbsp; Logout</a>
+    </aside>
+
+    <main class="dashboard-main">
+
+        <header class="dashboard-header">
+            <div>
+                <h1>My Tasks</h1>
+                <p>Organize your work and track your daily progress.</p>
+            </div>
+
+            <a href="#add-task" class="primary-btn">+ Add Task</a>
+        </header>
+
+        <section class="stats-grid">
+
+            <div class="stat-card">
+                <span class="stat-icon blue">▤</span>
+                <div>
+                    <p>Total Tasks</p>
+                    <h2>12</h2>
+                    <small>All assigned tasks</small>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-icon green">✓</span>
+                <div>
+                    <p>Completed</p>
+                    <h2>8</h2>
+                    <small>Finished tasks</small>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-icon orange">◷</span>
+                <div>
+                    <p>Pending</p>
+                    <h2>4</h2>
+                    <small>Tasks remaining</small>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-icon purple">!</span>
+                <div>
+                    <p>Overdue</p>
+                    <h2>1</h2>
+                    <small>Past deadline</small>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="dashboard-card">
+
+            <div class="section-heading">
+                <h2>Task List</h2>
+            </div>
+
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Task Name</th>
+                            <th>Project</th>
+                            <th>Deadline</th>
+                            <th>Priority</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Design Database Schema</td>
+                            <td>Library System</td>
+                            <td>08 Nov 2026</td>
+                            <td><span class="badge orange-badge">High</span></td>
+                            <td><span class="badge green-badge">Completed</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>Develop Login Module</td>
+                            <td>Library System</td>
+                            <td>12 Nov 2026</td>
+                            <td><span class="badge purple-badge">Medium</span></td>
+                            <td><span class="badge blue-badge">In Progress</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>Create UI Components</td>
+                            <td>E-Commerce</td>
+                            <td>08 Nov 2026</td>
+                            <td><span class="badge orange-badge">High</span></td>
+                            <td><span class="badge orange-badge">Pending</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>Test Application</td>
+                            <td>E-Commerce</td>
+                            <td>15 Nov 2026</td>
+                            <td><span class="badge gray-badge">Low</span></td>
+                            <td><span class="badge blue-badge">In Progress</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+
+        <section class="dashboard-card" id="add-task">
+
+            <div class="section-heading">
+                <h2>Add New Task</h2>
+            </div>
+
+            <form action="/tasks" method="post" class="project-form">
+
+                <label for="taskName">Task Name</label>
+                <input type="text" id="taskName" name="taskName"
+                       placeholder="Enter task name" required>
+
+                <label for="project">Select Project</label>
+                <select id="project" name="project" required>
+                    <option value="">Choose a project</option>
+                    <option value="Library System">Library System</option>
+                    <option value="Attendance System">Attendance System</option>
+                    <option value="E-Commerce">E-Commerce</option>
+                </select>
+
+                <label for="taskDeadline">Deadline</label>
+                <input type="date" id="taskDeadline"
+                       name="deadline" required>
+
+                <label for="priority">Priority</label>
+                <select id="priority" name="priority" required>
+                    <option value="Low">Low</option>
+                    <option value="Medium">Medium</option>
+                    <option value="High">High</option>
+                </select>
+
+                <button type="submit" class="submit-btn">Save Task</button>
+
+            </form>
+
+        </section>
+
+        <footer class="dashboard-footer">
+            Project Monitor | Task Management
+        </footer>
+
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Project Monitor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dashboard-body">
+
+    <aside class="sidebar">
+        <h2 class="sidebar-logo">🎓 Project Monitor</h2>
+
+        <nav class="side-nav">
+            <a class="active" href="dashboard.html">⌂ &nbsp; Dashboard</a>
+            <a href="projects.html">▣ &nbsp; My Projects</a>
+            <a href="tasks.html">✓ &nbsp; Tasks</a>
+            <a href="calendar.html">▦ &nbsp; Calendar</a>
+            <a href="messages.html">✉ &nbsp; Messages</a>
+            <a href="feedback.html">☆ &nbsp; Feedback</a>
+        </nav>
+
+        <a href="login.html" class="logout">⇥ &nbsp; Logout</a>
+    </aside>
+
+    <main class="dashboard-main">
+
+        <header class="dashboard-header">
+            <div>
+                <h1>Welcome back, Student!</h1>
+                <p>Keep going! You're making great progress on your projects.</p>
+            </div>
+            <div class="user-info">
+                <span class="avatar">S</span>
+                <div>
+                    <strong>Student User</strong>
+                    <p>Student</p>
+                </div>
+            </div>
+        </header>
+
+        <section class="stats-grid">
+            <div class="stat-card">
+                <span class="stat-icon blue">▣</span>
+                <div><p>Total Projects</p><h2>3</h2><small>Active projects</small></div>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-icon green">✓</span>
+                <div><p>Total Tasks</p><h2>12</h2><small>8 completed | 4 pending</small></div>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-icon orange">◷</span>
+                <div><p>Upcoming Deadlines</p><h2>2</h2><small>Within next 7 days</small></div>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-icon purple">☆</span>
+                <div><p>Feedbacks</p><h2>3</h2><small>From supervisor</small></div>
+            </div>
+        </section>
+
+        <section class="dashboard-card projects-card">
+            <div class="section-heading">
+                <h2>My Projects</h2>
+                <a href="projects.html">View All →</a>
+            </div>
+
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Project Name</th>
+                            <th>Status</th>
+                            <th>Progress</th>
+                            <th>Deadline</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Web Based Library Management System</td>
+                            <td><span class="badge blue-badge">In Progress</span></td>
+                            <td>
+                                60%
+                                <div class="mini-progress"><span style="width:60%"></span></div>
+                            </td>
+                            <td>15 Nov 2026</td>
+                            <td><a href="projects.html" class="view-btn">View</a></td>
+                        </tr>
+                        <tr>
+                            <td>Student Attendance System</td>
+                            <td><span class="badge gray-badge">Not Started</span></td>
+                            <td>
+                                0%
+                                <div class="mini-progress"><span style="width:0%"></span></div>
+                            </td>
+                            <td>25 Nov 2026</td>
+                            <td><a href="projects.html" class="view-btn">View</a></td>
+                        </tr>
+                        <tr>
+                            <td>E-Commerce Website</td>
+                            <td><span class="badge purple-badge">In Review</span></td>
+                            <td>
+                                80%
+                                <div class="mini-progress"><span style="width:80%"></span></div>
+                            </td>
+                            <td>10 Nov 2026</td>
+                            <td><a href="projects.html" class="view-btn">View</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <div class="dashboard-bottom">
+
+            <section class="dashboard-card">
+                <div class="section-heading">
+                    <h2>Project Progress</h2>
+                </div>
+
+                <div class="chart">
+                    <div class="chart-column">
+                        <div class="bar green-bar" style="height:60%"></div>
+                        <span>60%</span>
+                        <small>Library System</small>
+                    </div>
+                    <div class="chart-column">
+                        <div class="bar purple-bar" style="height:5%"></div>
+                        <span>0%</span>
+                        <small>Attendance</small>
+                    </div>
+                    <div class="chart-column">
+                        <div class="bar blue-bar" style="height:80%"></div>
+                        <span>80%</span>
+                        <small>E-Commerce</small>
+                    </div>
+                </div>
+            </section>
+
+            <section class="dashboard-card">
+                <div class="section-heading">
+                    <h2>My Tasks</h2>
+                    <a href="tasks.html">View All →</a>
+                </div>
+
+                <div class="task-row">
+                    <span class="task-done">✓</span>
+                    <span>Design Database Schema</span>
+                    <span class="badge green-badge">Completed</span>
+                </div>
+                <div class="task-row">
+                    <span class="task-done">✓</span>
+                    <span>Develop Login Module</span>
+                    <span class="badge blue-badge">In Progress</span>
+                </div>
+                <div class="task-row">
+                    <span class="task-pending">○</span>
+                    <span>Create UI Components</span>
+                    <span class="badge orange-badge">Pending</span>
+                </div>
+                <div class="task-row">
+                    <span class="task-pending">○</span>
+                    <span>Test API Integration</span>
+                    <span class="badge blue-badge">In Progress</span>
+                </div>
+            </section>
+
+            <section class="dashboard-card">
+                <div class="section-heading">
+                    <h2>Recent Activity</h2>
+                </div>
+
+                <div class="activity-row">
+                    <span class="activity-icon green">✓</span>
+                    <div><p>You completed Design Database Schema</p><small>2 hours ago</small></div>
+                </div>
+                <div class="activity-row">
+                    <span class="activity-icon blue">+</span>
+                    <div><p>You added a new task</p><small>Yesterday</small></div>
+                </div>
+                <div class="activity-row">
+                    <span class="activity-icon purple">☆</span>
+                    <div><p>Supervisor provided feedback</p><small>Yesterday</small></div>
+                </div>
+            </section>
+
+        </div>
+
+        <footer class="dashboard-footer">
+            Project Monitor | Student Project Management System
+        </footer>
+
+    </main>
+
+</body>
+</html>

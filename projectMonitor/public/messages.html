@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messages | Project Monitor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dashboard-body">
+
+    <aside class="sidebar">
+        <h2 class="sidebar-logo">🎓 Project Monitor</h2>
+
+        <nav class="side-nav">
+            <a href="dashboard.html">⌂ &nbsp; Dashboard</a>
+            <a href="projects.html">▣ &nbsp; My Projects</a>
+            <a href="tasks.html">✓ &nbsp; Tasks</a>
+            <a href="calendar.html">▦ &nbsp; Calendar</a>
+            <a class="active" href="messages.html">✉ &nbsp; Messages</a>
+            <a href="feedback.html">☆ &nbsp; Feedback</a>
+        </nav>
+
+        <a href="login.html" class="logout">⇥ &nbsp; Logout</a>
+    </aside>
+
+    <main class="dashboard-main">
+
+        <header class="dashboard-header">
+            <div>
+                <h1>Messages</h1>
+                <p>Stay connected with your project supervisor.</p>
+            </div>
+        </header>
+
+        <section class="dashboard-card">
+            <div class="section-heading">
+                <h2>Conversation</h2>
+                <span class="badge green-badge">Supervisor</span>
+            </div>
+
+            <div class="message-list">
+
+                <div class="message received">
+                    <div class="message-avatar">S</div>
+                    <div class="message-content">
+                        <strong>Supervisor</strong>
+                        <p>Please complete the project documentation
+                           before our next review.</p>
+                        <small>Today, 10:30 AM</small>
+                    </div>
+                </div>
+
+                <div class="message sent">
+                    <div class="message-content">
+                        <strong>You</strong>
+                        <p>I am working on the documentation and
+                           will share the updated version soon.</p>
+                        <small>Today, 11:00 AM</small>
+                    </div>
+                    <div class="message-avatar student-avatar">S</div>
+                </div>
+
+                <div class="message received">
+                    <div class="message-avatar">S</div>
+                    <div class="message-content">
+                        <strong>Supervisor</strong>
+                        <p>Good. Also check the pending tasks and
+                           update your project progress.</p>
+                        <small>Today, 11:15 AM</small>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="dashboard-card">
+            <div class="section-heading">
+                <h2>Send a Message</h2>
+            </div>
+
+            <form action="/messages" method="post" class="project-form">
+
+                <label for="recipient">Send To</label>
+                <select id="recipient" name="recipient" required>
+                    <option value="">Select recipient</option>
+                    <option value="supervisor">Project Supervisor</option>
+                </select>
+
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject"
+                       placeholder="Enter message subject" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5"
+                          placeholder="Write your message here..."
+                          required></textarea>
+
+                <button type="submit" class="submit-btn">
+                    Send Message
+                </button>
+
+            </form>
+        </section>
+
+        <footer class="dashboard-footer">
+            Project Monitor | Messages
+        </footer>
+
+    </main>
+
+</body>
+</html>
