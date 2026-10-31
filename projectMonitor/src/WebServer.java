@@ -27,9 +27,13 @@ projectManager.addProject(new Project(102, "Library Management System",
 
         AtomicInteger nextProjectId = new AtomicInteger(103);
 
-        HttpServer server = HttpServer.create(
-            new InetSocketAddress(8080), 0
-        );
+       int port = Integer.parseInt(
+    System.getenv().getOrDefault("PORT", "8080")
+);
+
+HttpServer server = HttpServer.create(
+    new InetSocketAddress(port), 0
+);
 
 
         server.createContext("/projects", exchange -> {
