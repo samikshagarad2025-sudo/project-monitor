@@ -2,8 +2,8 @@ FROM eclipse-temurin:21-jdk
 
 WORKDIR /app
 
-COPY src ./src
-COPY public ./public
+COPY projectMonitor/src ./src
+COPY projectMonitor/public ./public
 
 RUN mkdir -p out && javac -d out src/*.java
 
